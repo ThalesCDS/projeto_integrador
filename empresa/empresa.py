@@ -118,10 +118,10 @@ class PredictEmprestimo(object):
 
         return df3[boruta_columns]
 
-    def get_predictions(self, model, test_data, original_data):
+    def get_predictions(self, model, test_data):
         pred = model.predict(test_data)
-        original_data['prediction'] = pred
+        test_data['prediction'] = pred
 
-        return original_data.to_json(orient='records')
+        return test_data.to_json(orient='records')
     
 
