@@ -6,7 +6,7 @@ import pickle
 
 from empresa.empresa import PredictEmprestimo
 
-model = pickle.load(open('../model/final_model.pkl','rb'))
+model = pickle.load(open('model/final_model.pkl','rb'))
 
 app = Flask(__name__)
 
