@@ -118,7 +118,7 @@ class PredictEmprestimo(object):
 
         return df3[boruta_columns]
 
-    def get_predictions(self, model, test_data):
+    def get_predictions(self, model, test_data, test_raw):
         pred = model.predict(test_data)
         test_data['prediction'] = pred
 
